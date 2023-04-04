@@ -1,3 +1,8 @@
+resource "google_storage_bucket_iam_member" "member" {
+    bucket = "dimon-bucket-new-terraform"
+    role = "roles/storage.admin"
+    member = "allUsers"
+  }
 resource "google_compute_instance" "dareit-vm-ci" {
   name         = "dareit-vm-tf-ci"
   machine_type = "e2-medium"
@@ -22,8 +27,3 @@ resource "google_compute_instance" "dareit-vm-ci" {
     }
   }
 }
-resource "google_storage_bucket_iam_member" "member" {
-    bucket = "dimon-uniquebucket123"
-    role = "roles/storage.admin"
-    member = "allUsers"
-  }
