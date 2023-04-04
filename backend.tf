@@ -1,7 +1,7 @@
 terraform {
   required_version = ">= 1.0.11"
   backend "gcs" {
-    bucket = "bucket_for_task7"
+    bucket = "dimon-terraform-bucket"
     prefix = "dev"
   }
   required_providers {
