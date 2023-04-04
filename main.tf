@@ -22,3 +22,8 @@ resource "google_compute_instance" "dareit-vm-ci" {
     }
   }
 }
+resource "google_storage_bucket" "auto-expire" {
+  name          = "dimon-uniquebacket-terraform"
+  location      = "US"
+  force_destroy = true
+}
